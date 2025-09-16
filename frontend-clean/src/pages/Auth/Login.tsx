@@ -78,9 +78,9 @@ const Login = () => {
         // Set some user info in localStorage for demo auth
         localStorage.setItem('isAuthenticated', 'true');
         localStorage.setItem('user', JSON.stringify({
-          name: import.meta.env.VITE_ADMIN_NAME,
+          name: 'Anirban Bhandari',
           email: formData.email,
-          role: import.meta.env.VITE_ADMIN_ROLE
+          role: 'Admin'
         }));
         
         // Redirect to dashboard
