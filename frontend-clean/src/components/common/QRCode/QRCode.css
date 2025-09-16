@@ -1,0 +1,49 @@
+.qr-code-container {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  background-color: white;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.qr-code-container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.qr-code {
+  display: block;
+}
+
+.qr-code-download-button {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #003f7f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  opacity: 0.9;
+  transition: opacity 0.2s ease, background-color 0.2s ease;
+}
+
+.qr-code-download-button:hover {
+  opacity: 1;
+  background-color: #0056b3;
+}
+
+/* For print media, hide the download button */
+@media print {
+  .qr-code-download-button {
+    display: none;
+  }
+}

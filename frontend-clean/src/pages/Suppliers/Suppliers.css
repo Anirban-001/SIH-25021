@@ -1,0 +1,159 @@
+.suppliers-container {
+  padding: 20px;
+}
+
+.suppliers-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2px;
+}
+
+/* Compact button style for the Add Supplier button */
+.btn-compact {
+  padding: 0.15rem 0.5rem;
+  font-size: 0.85rem;
+  width:fit-content;
+  min-width: unset;
+  height: 28px;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  margin-left: auto; /* Aligns to right */
+  white-space: nowrap; /* Prevents text wrapping */
+}
+
+.suppliers-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.suppliers-table th,
+.suppliers-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.suppliers-table th {
+  background-color: #f5f5f5;
+  font-weight: 600;
+}
+
+.suppliers-table tr:last-child td {
+  border-bottom: none;
+}
+
+.suppliers-table tr:hover {
+  background-color: #f8f9fa;
+}
+
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  display: inline-block;
+}
+
+.status-active {
+  background-color: #e8f5e9;
+  color: #1b5e20;
+}
+
+.status-inactive {
+  background-color: #f5f5f5;
+  color: #616161;
+}
+
+.status-blacklisted {
+  background-color: #ffebee;
+  color: #b71c1c;
+}
+
+/* Status Edit Dropdown Styles */
+.status-edit-container {
+  position: relative;
+}
+
+.status-select {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  border: 1px solid transparent;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M6 9l6 6 6-6'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 6px center;
+  padding-right: 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.status-select:hover {
+  border-color: #ccc;
+}
+
+.status-select:focus {
+  outline: none;
+  border-color: #003f7f;
+  box-shadow: 0 0 0 2px rgba(0, 63, 127, 0.2);
+}
+
+.status-select.status-active {
+  background-color: #e8f5e9;
+  color: #1b5e20;
+}
+
+.status-select.status-inactive {
+  background-color: #f5f5f5;
+  color: #616161;
+}
+
+.status-select.status-blacklisted {
+  background-color: #ffebee;
+  color: #b71c1c;
+}
+
+.supplier-rating {
+  display: flex;
+}
+
+.star-filled, .star-empty {
+  color: #ffc107;
+  margin-right: 2px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-container {
+  max-width: 90%;
+  max-height: 90vh;
+  overflow: auto;
+  animation: modalFadeIn 0.3s ease;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,141 @@
+.supplier-add-modal {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  width: 800px;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 20px;
+  position: relative;
+}
+
+.supplier-add-modal .modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 16px;
+}
+
+.supplier-add-modal .modal-header h3 {
+  margin: 0;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.supplier-add-modal .close-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.supplier-add-modal .close-button:hover {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.supplier-add-modal .form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+  margin-bottom: 24px;
+}
+
+.supplier-add-modal .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.supplier-add-modal label {
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #555;
+}
+
+.supplier-add-modal input,
+.supplier-add-modal select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: border-color 0.2s;
+}
+
+.supplier-add-modal input:focus,
+.supplier-add-modal select:focus {
+  border-color: #0077cc;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 119, 204, 0.2);
+}
+
+.supplier-add-modal input.error,
+.supplier-add-modal select.error {
+  border-color: #e53935;
+}
+
+.supplier-add-modal .error-message {
+  color: #e53935;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.supplier-add-modal .form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.supplier-add-modal .btn-secondary {
+  background-color: #f0f0f0;
+  color: #333;
+  border: 1px solid #ddd;
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.supplier-add-modal .btn-secondary:hover {
+  background-color: #e0e0e0;
+}
+
+.supplier-add-modal .btn-primary {
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  padding: 10px 1px;
+  border-radius: 40px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.supplier-add-modal .btn-primary:hover {
+  background-color: #0066b3;
+}
+
+.supplier-add-modal .required {
+  color: #e53935;
+  margin-left: 2px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .supplier-add-modal .form-grid {
+    grid-template-columns: 1fr;
+  }
+}

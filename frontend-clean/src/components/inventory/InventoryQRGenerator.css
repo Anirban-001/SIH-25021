@@ -1,0 +1,133 @@
+.inventory-qr-generator {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 600px;
+  overflow: hidden;
+}
+
+.qr-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background-color: #003f7f;
+  color: white;
+}
+
+.qr-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.close-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.qr-content {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+}
+
+@media (max-width: 600px) {
+  .qr-content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.qr-preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.qr-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.item-detail {
+  display: flex;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.detail-label {
+  font-weight: 500;
+  width: 120px;
+  color: #666;
+}
+
+.detail-value {
+  flex: 1;
+}
+
+.qr-controls {
+  padding: 20px;
+  border-top: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.size-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.size-control label {
+  width: 50px;
+}
+
+.size-control input[type="range"] {
+  flex: 1;
+}
+
+.qr-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.print-button {
+  background-color: #003f7f;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.print-button:hover {
+  background-color: #00508f;
+}

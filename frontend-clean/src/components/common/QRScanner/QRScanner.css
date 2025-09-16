@@ -1,0 +1,142 @@
+.qr-scanner-container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+}
+
+.scanner-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.camera-select {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.camera-select select {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+  background-color: white;
+  min-width: 200px;
+}
+
+.scanner-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.start-button, .stop-button {
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+  border: none;
+}
+
+.start-button {
+  background-color: #003f7f;
+  color: white;
+}
+
+.start-button:hover {
+  background-color: #00508f;
+}
+
+.start-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.stop-button {
+  background-color: #dc3545;
+  color: white;
+}
+
+.stop-button:hover {
+  background-color: #c82333;
+}
+
+.scanner-view {
+  position: relative;
+  overflow: hidden;
+  background-color: #000;
+}
+
+/* Override some of the library's default styles */
+.scanner-view video {
+  object-fit: cover;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.scanning-indicator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  z-index: 10;
+}
+
+.scanning-animation {
+  width: 250px;
+  height: 250px;
+  border: 2px solid rgba(0, 255, 0, 0.5);
+  border-radius: 10px;
+  position: relative;
+  animation: scanAnimation 2s infinite;
+}
+
+@keyframes scanAnimation {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 0 15px rgba(0, 255, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 255, 0, 0);
+  }
+}
+
+.scanning-indicator p {
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.no-cameras, .permission-denied {
+  padding: 30px;
+  text-align: center;
+  color: #666;
+}
+
+.permission-denied button {
+  margin-top: 15px;
+  padding: 8px 16px;
+  background-color: #003f7f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.permission-denied button:hover {
+  background-color: #00508f;
+}

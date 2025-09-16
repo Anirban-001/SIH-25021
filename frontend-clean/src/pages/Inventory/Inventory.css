@@ -1,0 +1,188 @@
+.inventory-container {
+  padding: 20px;
+}
+
+.inventory-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-filter {
+  display: flex;
+  gap: 10px;
+}
+
+.search-input {
+  padding: 8px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  width: 300px;
+}
+
+.inventory-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.inventory-table th,
+.inventory-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.inventory-table th {
+  background-color: #f5f5f5;
+  font-weight: 600;
+}
+
+.inventory-table tr:last-child td {
+  border-bottom: none;
+}
+
+.inventory-table tr:hover {
+  background-color: #f8f9fa;
+}
+
+/* QR Code related styles */
+.scan-qr {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.scan-qr:before {
+  content: "⚲";
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.action-button {
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+.qr-button {
+  background-color: #6c757d;
+  color: white;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-container {
+  max-width: 90%;
+  max-height: 90vh;
+  overflow: auto;
+  animation: modalFadeIn 0.3s ease;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scanned-notification {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #e3f2fd;
+  border: 1px solid #bbdefb;
+  border-radius: 4px;
+  padding: 10px 16px;
+  margin-bottom: 20px;
+}
+
+.notification-content {
+  display: flex;
+  align-items: center;
+}
+
+.notification-label {
+  font-weight: 500;
+  margin-right: 10px;
+  color: #0d47a1;
+}
+
+.notification-value {
+  font-weight: 600;
+}
+
+.notification-close {
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+.highlighted-row {
+  background-color: #e3f2fd !important;
+  animation: highlightPulse 2s ease-out;
+}
+
+@keyframes highlightPulse {
+  0% {
+    background-color: #bbdefb;
+  }
+  100% {
+    background-color: #e3f2fd;
+  }
+}
+
+
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  display: inline-block;
+}
+
+.status-in-stock {
+  background-color: #e3f2fd;
+  color: #0d47a1;
+}
+
+.status-in-service {
+  background-color: #e8f5e9;
+  color: #1b5e20;
+}
+
+.status-defective {
+  background-color: #ffebee;
+  color: #b71c1c;
+}
+
+.status-retired {
+  background-color: #f5f5f5;
+  color: #616161;
+}

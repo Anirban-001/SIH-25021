@@ -1,0 +1,96 @@
+/* Select.css */
+
+.select-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.select-full-width {
+  width: 100%;
+}
+
+.select-label {
+  margin-bottom: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #4b5563;
+}
+
+.select-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.select-field {
+  width: 100%;
+  min-height: 40px;
+  padding: 8px 12px;
+  padding-right: 36px; /* Space for the dropdown icon */
+  font-size: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #1f2937;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  appearance: none; /* Remove browser default styling */
+}
+
+.select-field:focus {
+  outline: none;
+}
+
+.select-focused .select-field {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.select-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.select-wrapper.select-error .select-field {
+  border-color: #ef4444;
+}
+
+.select-wrapper.select-error .select-field:focus {
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.select-text {
+  margin-top: 4px;
+  font-size: 0.75rem;
+}
+
+.select-helper-text {
+  color: #6b7280;
+}
+
+.select-error-text {
+  color: #ef4444;
+}
+
+.select-field:disabled {
+  background-color: #f3f4f6;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Style for option elements */
+.select-field option {
+  padding: 8px;
+}
+
+.select-field option:disabled {
+  color: #9ca3af;
+}

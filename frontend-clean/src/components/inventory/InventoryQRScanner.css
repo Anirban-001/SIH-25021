@@ -1,0 +1,194 @@
+.inventory-qr-scanner {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 600px;
+  overflow: hidden;
+}
+
+.scanner-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background-color: #003f7f;
+  color: white;
+}
+
+.scanner-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+}
+
+.close-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.scanner-content {
+  padding: 0;
+}
+
+.upload-option {
+  display: flex;
+  justify-content: center;
+  padding: 2px;
+  background-color: #f5f5f5;
+  border-top: 1px solid #e0e0e0;
+}
+
+.upload-button {
+  background-color: #003f7f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.upload-button:hover {
+  background-color: #00508f;
+}
+
+.upload-button:before {
+  content: "⬆";
+  font-size: 1.1rem;
+}
+
+.file-input {
+  display: none;
+}
+
+.scan-result {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box; /* Include padding in width calculation */
+  overflow: auto; /* Add scrolling if needed */
+  max-height: 500px; /* Limit height and add scrolling for many fields */
+}
+
+.item-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 100%; /* Ensure content doesn't overflow */
+}
+
+.success-icon {
+  width: 60px;
+  height: 60px;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.item-found h4 {
+  margin: 0 0 15px 0;
+  font-size: 1.3rem;
+  text-align: center;
+  word-wrap: break-word;
+  max-width: 100%;
+  padding: 0 10px;
+  color: #003f7f;
+}
+
+.error-icon {
+  width: 60px;
+  height: 60px;
+  background-color: #f44336;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.error-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #f44336;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.item-details {
+  width: 100%;
+  margin-top: 20px;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+
+.item-detail {
+  display: flex;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  flex-wrap: wrap; /* Allow wrapping for long values */
+  align-items: flex-start; /* Align items at the top */
+}
+
+.detail-label {
+  font-weight: 500;
+  width: 140px; /* Increased width for longer labels */
+  min-width: 140px; /* Ensure minimum width */
+  color: #666;
+  padding-right: 10px; /* Add some spacing */
+}
+
+.detail-value {
+  flex: 1;
+  word-break: break-word; /* Break long words */
+  max-width: calc(100% - 150px); /* Ensure value doesn't overlap */
+}
+
+.scan-again-button {
+  margin-top: 20px;
+  background-color: #003f7f;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.scan-again-button:hover {
+  background-color: #00508f;
+}
