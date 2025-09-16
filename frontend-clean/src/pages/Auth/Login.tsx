@@ -74,7 +74,7 @@ const Login = () => {
       
       // Use environment variables instead of hardcoded credentials
       // In a real app, this would be an API call
-      if (formData.email === import.meta.env.VITE_ADMIN_EMAIL && formData.password === import.meta.env.VITE_ADMIN_PASSWORD) {
+      if (formData.email === 'admin@railtrack.in' && formData.password === 'password123') {
         // Set some user info in localStorage for demo auth
         localStorage.setItem('isAuthenticated', 'true');
         localStorage.setItem('user', JSON.stringify({
